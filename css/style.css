@@ -1,0 +1,185 @@
+@font-face{
+    font-family:'Red Hat Display';
+    src: url('../font/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /*font 500 700 900*/
+    --Red-Hat-Display:'Red Hat Display';
+    /*Primary color*/
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --hover-color:hsl(245, 83%, 68%);
+    /*Neutral color*/
+    --bg-plan:hsl(224, 23%, 55%,0.05);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+img{
+    display: block;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px;
+    background: url('../images/pattern-background-desktop.svg')top center no-repeat;
+    background-size: 100% 45%;
+    background-color: var(--Pale-blue);
+}
+.summary-card{
+    max-width: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: var(--Very-pale-blue);
+    box-shadow: hsl(245, 75%, 52%,0.10) 0px 60px 40px -7px;
+}
+
+.Card-content{
+    text-align: center;
+    font-family: var(--Red-Hat-Display);
+    padding: 44px 45px 48px;
+}
+h2{
+    font-weight: 900;
+    font-size: 1.8em;
+    color: var(--Dark-blue);
+}
+p{
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    padding: 13px ;
+    line-height: 1.7;
+}
+.plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-plan);
+    padding: 20px 26px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+}
+.price > div span{
+    display: block;
+    font-weight: 900;
+    font-size: 1em;
+}
+.price > div span:first-child{
+    color: var(--Dark-blue);
+    margin-bottom: 7px;
+}
+.price > div span:last-child{
+    color: var(--Desaturated-blue);
+}
+
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: var(--Bright-blue);
+    font-weight: 900;
+}
+button:hover{
+    transition:all 0.3s ease-in;
+    color: var(--hover-color);
+    text-decoration: none;
+}
+.action {
+    margin-top: 38px;
+    font-size: 1em;
+}
+.action a{
+    display: block;
+}
+.action a:first-child{
+    background-color: var(--Bright-blue);
+    padding: 16px;
+    color: var(--Very-pale-blue);
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: hsl(245, 75%, 52%,0.09) 0px 2px 1px, hsl(245, 75%, 52%,0.09) 0px 4px 2px, hsl(245, 75%, 52%,0.09) 0px 8px 4px, hsl(245, 75%, 52%,0.09) 0px 16px 8px, hsl(245, 75%, 52%,0.09) 0px 32px 16px;
+}
+.action a:first-child:hover{
+    transition: all 0.3s ease;
+    background-color:var(--hover-color);
+    box-shadow: none;
+}
+.action a:last-child{
+    margin-top: 30px;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+}
+.action a:last-child:hover{
+    transition: color 0.3s ease-in;
+    color: var(--Dark-blue);
+    
+}
+.attribution{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: var(--Red-Hat-Display);
+}
+.attribution a{
+    font-size: 1.1em;
+    font-weight: 700;
+}
+@media(max-width:443px){
+    section{
+        padding: 100px 22px;
+        background: url('../images/pattern-background-mobile.svg')top center no-repeat;
+        background-color: var(--Pale-blue);
+    }
+    h2{
+        font-size: 1.4em;
+    }
+    .Card-content{
+        padding: 31px 26px 32px;
+    }
+    p{
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 500;
+        font-size: 1.01em;
+    }
+    .price > div span{
+        font-size: 0.9em;
+    }
+    .plan{
+        padding: 16px 14px;
+        margin-top: 15px;
+    }
+    .price > div span:first-child{
+        margin-bottom: 2px;
+    }
+    .action{
+        margin-top: 23px;
+    }
+    .action a:last-child{
+        margin-top: 21px;
+    }
+}
